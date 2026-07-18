@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,16 +15,21 @@
             background-color: #f4f4f4;
         }
         h1 { margin: 20px; color: #333; }
+
         .pdf-container {
             width: 90%;
-            height: 90vh;
+            height: 70vh;
             border: 2px solid #ccc;
             background-color: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
         }
+
         .model-container {
             width: 90%;
-            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
     </style>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
@@ -32,18 +37,19 @@
 <body>
 
     <h1>SAKURA KOREEDA</h1>
-    <div class="model-container">
-        <model-viewer 
-            src="いちごオーレ改.glb" 
-            alt="3D" 
-            auto-rotate 
-            camera-controls 
-            style="width: 100%; height: 400px; background-color: #f0f0f0;">
-        </model-viewer>
-    </div>
 
     <div class="pdf-container">
         <embed src="SakuraProject1.pdf" type="application/pdf" width="100%" height="100%" />
+    </div>
+
+    <div class="model-container">
+        <model-viewer 
+            src="Ichigo.glb" 
+            alt="3D" 
+            auto-rotate 
+            camera-controls 
+            style="width: 100%; height: 500px; background-color: #f0f0f0;">
+        </model-viewer>
     </div>
 
 </body>
