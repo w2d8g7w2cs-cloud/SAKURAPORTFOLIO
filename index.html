@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOREEDA SAKURA | VIRTUAL PORTFOLIO</title>
 
-    <!-- Google Fonts:Archivo Black (太字) と Inter (本文用) を読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- ベーススタイル (ダークモード) --- */
         body {
             margin: 0;
             padding: 0;
-            background-color: #111; /* ほぼ黒に近い背景 */
+            background-color: #111; 
             font-family: 'Inter', sans-serif;
             color: #eee;
             display: flex;
@@ -24,19 +22,17 @@
             min-height: 100vh;
         }
 
-        /* スクロールバーのカスタマイズ (ダーク仕様) */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-        /* --- ヘッダー（アーティスト名） --- */
         h1 {
             margin-top: 80px;
             margin-bottom: 60px;
             font-family: 'Archivo Black', sans-serif;
             font-size: 4rem;
-            letter-spacing: -0.05em; /* 文字間を詰めてスタイリッシュに */
+            letter-spacing: -0.05em; 
             color: #fff;
             text-transform: uppercase;
             position: relative;
@@ -44,7 +40,6 @@
             text-align: center;
         }
 
-        /* アーティスト名の下に引くネオンライン（原色の黄色一色） */
         h1::after {
             content: '';
             position: absolute;
@@ -52,34 +47,30 @@
             bottom: -10px;
             width: 100%;
             height: 6px;
-            background: #ffe600; /* 原色の黄色に変更 */
+            background: #ffe600;
             border-radius: 3px;
             z-index: -1;
             opacity: 0.9;
-            box-shadow: 0 0 15px rgba(255, 230, 0, 0.6); /* 黄色のネオン風の光を追加 */
+            box-shadow: 0 0 15px rgba(255, 230, 0, 0.6); 
         }
 
-        /* --- コンテンツセクション共通 --- */
+  
         .content-section {
             width: 85%;
-            max-width: 1200px; /* 少し広めのレイアウト */
+            max-width: 1200px; 
             margin-bottom: 80px;
             position: relative;
             
-            /* 影や線をなくし、背景に馴染ませる */
             background: transparent;
             
-            /* ふわっと浮かせるアニメーション */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* ホバー時の演出 */
         .content-section:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
-        /* セクションタイトル（小さく上に配置） */
         .section-label {
             position: absolute;
             top: -30px;
@@ -91,17 +82,15 @@
             font-weight: 400;
         }
 
-        /* --- 各コンテナの調整 (角丸だけ残す) --- */
         .media-container {
             overflow: hidden;
-            border-radius: 12px; /* コンテンツ全体に控えめな角丸 */
-            background-color: #000; /* ローディング時などに黒背景を表示 */
-            border: 1px solid #333; /* 非常に細いボーダーで境界を定義 */
+            border-radius: 12px;
+            background-color: #000;
+            border: 1px solid #333; 
         }
 
-        /* --- PDF埋め込みエリア --- */
         .pdf-container {
-            height: 85vh; /* 縦長コンテンツを見やすく大きく表示 */
+            height: 85vh;
         }
         
         .pdf-container embed {
@@ -110,9 +99,8 @@
         }
 
 
-        /* --- YouTube埋め込みエリア (シネマスコープ風) --- */
         .youtube-container {
-            aspect-ratio: 21 / 9; /* YouTube標準16:9より横長の映画的な比率 */
+            aspect-ratio: 21 / 9; 
             background: #000;
         }
 
@@ -122,7 +110,6 @@
             border: none;
         }
 
-        /* --- 3Dモデルエリア --- */
         .model-container {
             height: 700px;
         }
@@ -130,14 +117,11 @@
         .model-viewer-custom {
             width: 100%;
             height: 100%;
-            /* モデルビューワーの背景を濃いグラデーションに */
             background: radial-gradient(circle at center, #222 0%, #000 100%);
-            --poster-color: transparent; /* ポスター画像は使わず背景を表示 */
-            /* コントロールボタンの色を白っぽく変更 */
+            --poster-color: transparent; 
             --progress-bar-color: #ff007f; 
         }
 
-        /* --- フッター的な要素 --- */
         .footer-text {
             margin-bottom: 40px;
             color: #444;
@@ -146,17 +130,15 @@
             letter-spacing: 0.1em;
         }
 
-        /* --- レスポンシブ対応 (スマホ向け) --- */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; margin-top: 50px; margin-bottom: 40px; }
             .content-section { width: 95%; margin-bottom: 60px; }
             .section-label { position: relative; top: 0; margin-bottom: 10px; display: block; text-align: left;}
             
-            /* スマホでは縦長比率を解除して見やすく調整 */
             .pdf-container { height: 60vh; }
             .youtube-container { aspect-ratio: 16 / 9; }
             .model-container { height: 400px; }
-            .content-section:hover { transform: none; box-shadow: none; } /* ホバーエフェクト解除 */
+            .content-section:hover { transform: none; box-shadow: none; } 
         }
     </style>
 </head>
@@ -166,7 +148,6 @@
     
     <div class="footer-text">Digital Archive 2026</div>
 
-    <!-- PDFプレビューエリア -->
     <div class="content-section">
         <div class="section-label">PROJECT1</div>
         <div class="media-container pdf-container">
@@ -174,7 +155,6 @@
         </div>
     </div>
 
-    <!-- YouTube埋め込みエリア -->
     <div class="content-section">
         <div class="section-label">PROJECT3</div>
         <div class="media-container youtube-container">
@@ -187,7 +167,6 @@
         </div>
     </div>
 
-    <!-- 3Dモデル表示エリア -->
     <div class="content-section">
         <div class="section-label">Asset Preview</div>
         <div class="media-container model-container">
@@ -197,9 +176,9 @@
                 alt="3D Model Preview" 
                 auto-rotate 
                 camera-controls
-                camera-orbit="0deg 75deg 2m" /* 初期カメラアングル設定 */
-                environment-image="neutral" /* 環境光の設定 */
-                shadow-intensity="0" /* モデルの影を消して浮遊感を出す */
+                camera-orbit="0deg 75deg 2m" 
+                environment-image="neutral" 
+                shadow-intensity="0" 
                 reveal="auto">
             </model-viewer>
         </div>
