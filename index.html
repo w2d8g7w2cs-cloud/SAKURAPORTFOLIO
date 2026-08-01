@@ -44,7 +44,7 @@
             text-align: center;
         }
 
-        /* アーティスト名の下に引くネオンライン */
+        /* アーティスト名の下に引くネオンライン（原色の黄色一色） */
         h1::after {
             content: '';
             position: absolute;
@@ -52,10 +52,11 @@
             bottom: -10px;
             width: 100%;
             height: 6px;
-            background: linear-gradient(90deg, #ff007f, #7928ca); /* 鮮やかなグラデーション */
+            background: #ffe600; /* 原色の黄色に変更 */
             border-radius: 3px;
             z-index: -1;
-            opacity: 0.8;
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(255, 230, 0, 0.6); /* 黄色のネオン風の光を追加 */
         }
 
         /* --- コンテンツセクション共通 --- */
@@ -163,11 +164,11 @@
 
     <h1>KOREEDA SAKURA</h1>
     
-    <div class="footer-text">Digital Archive v.2024</div>
+    <div class="footer-text">Digital Archive 2026</div>
 
     <!-- PDFプレビューエリア -->
     <div class="content-section">
-        <div class="section-label">Documentation</div>
+        <div class="section-label">PROJECT1</div>
         <div class="media-container pdf-container">
             <embed src="SakuraProject1.pdf" type="application/pdf" width="100%" height="100%" />
         </div>
@@ -175,7 +176,7 @@
 
     <!-- YouTube埋め込みエリア -->
     <div class="content-section">
-        <div class="section-label">Process Reel</div>
+        <div class="section-label">PROJECT3</div>
         <div class="media-container youtube-container">
             <iframe src="https://www.youtube.com/embed/Q8Ynm7c42fA" 
                     title="YouTube video player" 
